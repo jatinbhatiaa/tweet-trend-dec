@@ -4,11 +4,15 @@ pipeline {
             label 'maven-node'
         }
     }
+enviroment{
+    PATH = "/opt/apache-maven-3.9.6/bin:$PATH"
+
+}
     stages  {
-        stage('pull code'){
-            steps {
-               git branch: 'main', url: 'https://github.com/jatinbhatiaa/tweet-trend-dec.git'
-            }
+       stage("build"){
+        steps{
+            sh "mvn clean deploy"
         }
+       }
     }
 }

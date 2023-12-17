@@ -19,7 +19,7 @@ spec:
        - name: jfrogcred
      containers:
        - name: myapp
-         image: mayrajpu.jfrog.io/trend-docker-local/ttrend:2.1.2
+         image: mayrajpu.jfrog.io/trend-docker-local/ttrend:2.1.3
          imagePullPolicy: Always
          ports:
            - containerPort: 8000
